@@ -72,7 +72,7 @@ const ZoomMvp = () => {
     setScale(scaleMark.current)
   }
 
-  const handleOffset = e => {
+  const handleMove = e => {
     let moveX = e.deltaX * 0.15
     let moveY = e.deltaY * 0.15
     let next = {
@@ -135,7 +135,7 @@ const ZoomMvp = () => {
             updateOrigin(e)
             handleScale(e.deltaY)
           } else {
-            handleOffset(e)
+            handleMove(e)
             updateOrigin(e)
           }
         }}
